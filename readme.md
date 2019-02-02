@@ -1,42 +1,67 @@
 # pathfindr
 
-Example:
+pathfindr is a very small library and it has no dependencies, unminified it's a total of 14 lines of code.
 
-Let's say this is the data you have,
+### Example
 
 ```javascript
+// sample data
 const product = {
     data: {
         images: [
             {
-                url :'image.png'
+                url: 'image.png'
             }
         ]
     }
 }
 ```
 
- and want to get the image you would do something like this:
-
 ```javascript
-const imageUrl = product.images[0].url
-```
-
-but what if the obje    ct doesn't have the *data* field or doesn't have an *images* field? Right the application would crash.
-
-if you use pathfinder this will never be an issue anymore!
-
-You can use it like this (given we use the data from above):
-
-```javascript
-const imageUrl = pathfinder('data/images/0/url')
-```
-
-no need for the ugly
-
-```javascript
-product.data && product.data.images
+					 // pathfindr in action
+const productImage = pathfindr('data/images/0/url') || "fallback.png"
 ```
 
 
 
+### Why? 
+
+Let's say you are looping through data and the field could be undefined, you'd have to write all kind of checks to see if the field exists or else the application will break and throws an exception.
+
+```javascript
+const products = [
+    {
+        title: 'Soup',
+        price: 100,
+        data: {
+            images: [{
+                url: 'image.png'
+            }]
+        }
+    },
+    {
+	    title: 'Not soup',
+    	price: 50
+    }
+]
+```
+
+##### This is how you would map the images with pathfindr:
+
+```javascript
+const productImages = products.map(
+    product => pathfindr('data/images/0/url') || "fallbackImage.png"
+)
+```
+
+This won't throw an exception if the field doesn't exist, you can easily give a default value by adding double pipe symbol with whatever value it should be if it were undefined.
+
+
+
+This code has the same result but is not using pathfindr, you have to check for existence of the fields yourself and it can easily be hard to read for someone else.
+
+```javascript
+const productImages = products.map( product => (
+	(product.data && product.images) ? product.images[0].url : "fallbackImage.png"
+))
+```
