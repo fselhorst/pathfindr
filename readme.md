@@ -22,7 +22,7 @@ const product = {
 const imageUrl = product.images[0].url
 ```
 
-but what if the object doesn't have the *data* field or doesn't have an *images* field? Right the application would crash.
+but what if the obje    ct doesn't have the *data* field or doesn't have an *images* field? Right the application would crash.
 
 if you use pathfinder this will never be an issue anymore!
 
