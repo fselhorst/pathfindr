@@ -1,6 +1,6 @@
 {
   "name": "pathfindr",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "easy path finder/traverser for objects",
   "main": "index.js",
   "url": "",
