@@ -1,12 +1,20 @@
 {
   "name": "pathfindr",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "easy path finder/traverser for objects",
   "main": "index.js",
+  "url": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest src/tests"
   },
   "keywords": [],
   "author": "zapdos",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebook/jest.git"
+  }
 }
