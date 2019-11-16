@@ -3,6 +3,7 @@
   "version": "1.0.8",
   "description": "easy path finder/traverser for objects",
   "main": "index.js",
+  "keywords": ["traverse", "pathfinding", "traversing", "path finder", "pathfinder"]
   "url": "",
   "scripts": {
     "test": "jest src/tests"
@@ -15,6 +16,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/facebook/jest.git"
+    "url": "git+https://github.com/fselhorst/pathfindr"
   }
 }
