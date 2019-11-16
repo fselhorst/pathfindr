@@ -1,14 +1,13 @@
 {
   "name": "pathfindr",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "easy path finder/traverser for objects",
   "main": "index.js",
-  "keywords": ["traverse", "pathfinding", "traversing", "path finder", "pathfinder"]
+  "keywords": ["traverse", "pathfinding", "traversing", "path finder", "pathfinder"],
   "url": "",
   "scripts": {
     "test": "jest src/tests"
   },
-  "keywords": [],
   "author": "zapdos",
   "license": "ISC",
   "devDependencies": {
